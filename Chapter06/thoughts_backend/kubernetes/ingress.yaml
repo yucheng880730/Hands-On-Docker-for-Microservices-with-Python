@@ -2,14 +2,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-    name: thoughts-backend-ingress
-    namespace: example
+  name: thoughts-backend-ingress
+  namespace: example
 spec:
-    rules:
-        - host: thoughts.example.local
-          http:
-            paths:
-              - backend:
-                  serviceName: thoughts-service
-                  servicePort: 80
-                path: /
+  rules:
+    # multiple services can be exposed on the same nodes, they get distinguished by their hostname
+    - host: thoughts.example.local
+      http:
+        paths:
+          - backend:
+              serviceName: thoughts-service
+              # make the service be exposed to the nodes on port 80
+              servicePort: 80
+            path: /

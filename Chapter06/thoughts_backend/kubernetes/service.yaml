@@ -2,15 +2,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-    namespace: example
-    labels:
-        app: thoughts-service
-    name: thoughts-service
+  namespace: example
+  labels:
+    app: thoughts-service
+  name: thoughts-service
+# spec section defines the open ports
 spec:
-    ports:
-        - name: thoughts-backend
-          port: 80
-          targetPort: 8000
-    selector:
-        app: thoughts-backend
-    type: NodePort
+  ports:
+    - name: thoughts-backend
+      # access to the service on port 80 to port 8000
+      port: 80
+      targetPort: 8000
+  # routes all the requests to any pod that match
+  selector:
+    app: thoughts-backend
+  # allow access from outside the cluster
+  type: NodePort

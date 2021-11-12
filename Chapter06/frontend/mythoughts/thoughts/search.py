@@ -12,6 +12,8 @@ def load(request):
     return redirect('index')
 
 
+# request by the customer gets transformed into API endpoints
+# the result is decoded in JSON and rendered in the template 
 def search(request):
     username = get_username_from_session(request)
     search_param = request.GET.get('search')
