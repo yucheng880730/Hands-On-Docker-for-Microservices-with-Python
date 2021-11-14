@@ -1,19 +1,19 @@
-Users Backend example
-=======
+# Users Backend example
 
 This code is our example of Users Backend for the Thoughts application. It is a Flask application (https://www.djangoproject.com/) that creates a RESTful backend to store microblogging posts.
 
 **THIS IS AN EXAMPLE WEBSITE**
 
-Set it up
-------
+## Set it up
 
 Create a virtual environment and install the requirements
 
     $ python3 -m venv ./venv
     $ source ./venv/bin/activate
+    (source is a shell command designed for user running on Linux )
+    (On Windows, virtualenv creates a .bat/.ps1 file, so you should run "venv\Scripts\activate")
+    ("deactivate" puts things back to normal)
     $ pip install -r requirements.txt
-
 
 Get the local database ready
 
@@ -31,16 +31,12 @@ Start the development server
 
 Check the service at http://127.0.0.1:5000/
 
-
-Tests
-------
+## Tests
 
 Run the unit tests with
 
     $ pytest
 
-
-Dependencies
-------
+## Dependencies
 
 UsersBackend uses Flask as a web framework, Flask RESTplus for creating the interface, and SQLAlchemy to handle the database models. It uses a SQLlite database for local development.
