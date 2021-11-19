@@ -19,6 +19,7 @@ spec:
       labels:
         app: thoughts-backend
     spec:
+      # deploy a pod with two containers, one with database, and another with the application
       containers:
         - name: thoughts-backend-service
           image: thoughts_server:latest

@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from .token_validation import validate_token_header
 
 # need to check whether a user is logged in
+# which returns the username or None
 def get_username_from_session(request):
     cookie_session = request.COOKIES.get('session')
     # add an authorization header to our request
