@@ -22,6 +22,8 @@ Get the local database ready
 Start the development server
 
     $ FLASK_APP=wsgi.py flask run
+    (window version command => set FLASK_APP=wsgi.py)
+    (window version command => flask run)
     * Serving Flask app "wsgi.py"
     * Environment: production
     WARNING: Do not use the development server in a production environment.

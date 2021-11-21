@@ -15,7 +15,7 @@ IP on your local machine.
 
 Up the service
 
-    $ docker-compose up
+    $ docker-compose up -d
 
 ## Test and login
 
